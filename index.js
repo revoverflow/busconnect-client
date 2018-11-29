@@ -3,13 +3,15 @@ const {
   BrowserWindow
 } = require('electron')
 
-let win
+const config = require("./config.json");
+
+let win;
 
 function createWindow() {
   win = new BrowserWindow({
     width: 480,
     height: 320,
-    fullscreen: true,
+    fullscreen: config.fullscreen,
     frame: false
   });
 
