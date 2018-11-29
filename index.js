@@ -9,10 +9,11 @@ function createWindow() {
   win = new BrowserWindow({
     width: 480,
     height: 320,
+    fullscreen: true,
     frame: false
   });
 
-  win.loadFile('C:/Users/Overflow/Documents/TPE-Arret/content/index.html');
+  win.loadFile(__dirname + '/content/index.html');
 
   win.on('closed', () => {
     win = null
