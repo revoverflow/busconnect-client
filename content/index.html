@@ -9,23 +9,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script>
+      var current_ligne = "171";
       var socket = io.connect('http://188.166.22.231:80');
       
       socket.on("verify", function(data) {
-        if(data.success) {
-          console.log("[!] Connexion au serveur réussie !");
-          console.log("[ID] " + data.id);
-          socket.emit("set_arret", { arret: "A-1" });
+            if(data.success) {
+                console.log("[!] Connexion au serveur réussie !");
+                console.log("[ID] " + data.id);
+                socket.emit("set_arret", { arret: "A-1" });
+            }
+        });
+      
+        socket.on("connect_error", () => {
+            alert("[!] Connexion échouée");
+        });
+      
+        function presence(ligne_num) {
+            socket.emit("presence", { ligne: ligne_num });
         }
-      });
-      
-      socket.on("connect_error", () => {
-        alert("[!] Connexion échouée");
-      });
-      
-      function presence(ligne_num) {
-        socket.emit("presence", { ligne: ligne_num });
-      }
+        
+        function changeLigne(ligne) {
+            current_ligne(ligne);
+        }
     </script>
 </head>
 
@@ -34,40 +39,36 @@
         <p>Arrêt de bus</p>
     </div>
     <div class="lignes">
-        <div class="ligne">
+        <div onclick="changeLigne('171');" class="ligne">
             <p class="numero-ligne">171</p>
             <p class="desc-ligne">Montluel -> Lyon</p>
         </div>
-        <div class="ligne">
+        <div onclick="changeLigne('132');" class="ligne">
             <p class="numero-ligne">132</p>
             <p class="desc-ligne">Bourg en Bresse -> Lyon</p>
         </div>
-        <div class="ligne">
-            <p class="numero-ligne">171</p>
-            <p class="desc-ligne">Lyon -> Montluel</p>
-        </div>
-        <div class="ligne">
+        <div onclick="changeLigne('CO1');" class="ligne">
             <p class="numero-ligne">CO1</p>
             <p class="desc-ligne">Thil Mairie -> Mas-rillier Centre</p>
         </div>
-        <div class="ligne">
+        <div onclick="changeLigne('CO2');" class="ligne">
             <p class="numero-ligne">CO2</p>
             <p class="desc-ligne">Forum des sports -> Gare de Miribel</p>
         </div>
-        <div class="ligne">
+        <div onclick="changeLigne('CO3');" class="ligne">
             <p class="numero-ligne">CO3</p>
             <p class="desc-ligne">Miribel Centre -> Rilleux Les Alagniers</p>
         </div>
-        <div class="ligne">
+        <div onclick="changeLigne('CO4');" class="ligne">
             <p class="numero-ligne">CO4</p>
             <p class="desc-ligne">Tramoyes Mairie -> Gare de Miribel</p>
         </div>
     </div>
 
     <div class="infos">
-        <p class="lignenum">171</p>
+        <p class="lignenum" id="ligneid">171</p>
         <button class="map" onclick="window.location.href = 'map.html'">Voir sur la carte</button>
-        <button class="confirm" onclick="presence(171);">Confirmer</button>
+        <button class="confirm" onclick="presence(current_ligne);">Confirmer</button>
     </div>
 </body>
 
