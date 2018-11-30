@@ -7,6 +7,25 @@
     <title>BusConnect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script>
+      var socket = io.connect('http://188.166.22.231:80');
+      
+      socket.on("verify", function(data) {
+        if(data.success) {
+          console.log("[!] Connexion au serveur réussie !");
+          console.log("[ID] " + data.id);
+          socket.emit("set_arret", { arret: "A-1" });
+        }
+      });
+      
+      socket.on("connect_error", () => {
+        alert("[!] Connexion échouée");
+      });
+      
+      function presence(ligne_num) {
+        socket.emit("presence", { ligne: ligne_num });
+      }
+    </script>
 </head>
 
 <body>
@@ -55,7 +74,7 @@
     <div class="infos">
         <p class="lignenum">171</p>
         <button class="map" onclick="window.location.href = 'map.html'">Voir sur la carte</button>
-        <button class="confirm">Confirmer</button>
+        <button class="confirm" onclick="presence(171);">Confirmer</button>
     </div>
 </body>
 
