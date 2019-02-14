@@ -1,6 +1,6 @@
 const webview = document.getElementById('webview');
+const baseurl = location.href.replace(/[^/]*$/, '');
 
 function redirect(url) {
-    var baseurl = webview.getURL().replace(/[^/]*$/, '');
     webview.loadURL(baseurl + url);
 }
