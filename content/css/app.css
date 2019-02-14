@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+
+div.menu {
+    box-shadow: -4px 0 10px 0 #000000;
+    float: left;
+    background: #ffffff;
+    height: 100vh;
+    width: 90px;
+}
+
+div.menu-item {
+    transition-duration: 0.3s;
+    background: #ffffff;
+    height: 25vh;
+    width: 100%;
+}
+
+div.menu-item i {
+    font-size: 30px;
+    width: 100%;
+    line-height: 25vh;
+    text-align: center;
+}
+
+div.menu-item:hover {
+    background: #f5f5f5;
+    height: 25vh;
+    width: 100%;
+}
+
+div.content {
+    background: #ffffff;
+    height: 100vh;
+    width: 100%;
+}
+
+.webview {
+    height: 100vh;
+}

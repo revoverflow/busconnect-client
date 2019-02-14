@@ -1,0 +1,129 @@
+{
+  "arrets": [
+    {
+      "name": "Gare",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Mairie",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Centre",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Place de la République",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Henri Deschamps",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Anne Frank",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Trève",
+      "ville": "Miribel",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Mairie",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "8 mai 1945",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Les Andrés",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Pommières",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Grandes vignes",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "La Sereine",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Louis Armstrong",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Gare",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Barronières",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Actinove",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Zone commerciale des Baterses",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Pré Caillat",
+      "ville": "Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Les Combes",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Forum des sports - Lilô",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.829529,
+      "long": 4.945890
+    }]
+}

@@ -1,0 +1,153 @@
+{
+  "arrets": [
+    {
+      "name": "Mairie",
+      "ville": "Thil",
+      "lat": 45.8142611,
+      "long": 5.021975
+    },
+    {
+      "name": "Quai des amours",
+      "ville": "Thil",
+      "lat":  45.811694,
+      "long": 5.027477
+    },
+    {
+      "name": "Rue Neuve",
+      "ville": "Thil",
+      "lat":  45.814887,
+      "long":  5.026931
+    },
+    {
+      "name": "Le Verger",
+      "ville": "Thil",
+      "lat": 45.816914,
+      "long": 5.019999
+    },
+    {
+      "name": "La Verchère",
+      "ville": "Thil",
+      "lat": 45.818339,
+      "long": 5.019300
+    },
+    {
+      "name": "Champ du Perron",
+      "ville": "Thil",
+      "lat": 45.820658,
+      "long": 5.017919
+    },
+    {
+      "name": "Zone Commerciale des Baterses",
+      "ville": "Beynost",
+      "lat": 45.826232,
+      "long": 4.999222
+    },
+    {
+      "name": "Pré Caillat",
+      "ville": "Beynost",
+      "lat": 45.821828,
+      "long": 4.994538
+    },
+    {
+      "name": "ZAC des Malettes",
+      "ville": "Beynost",
+      "lat": 45.828233,
+      "long": 4.941329
+    },
+    {
+      "name": "Forum des Sports - Chat botté",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.827404,
+      "long": 4.988710
+    },
+    {
+      "name": "Les Combes",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.824222,
+      "long": 4.988348
+    },
+    {
+      "name": "Pilon",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.820946,
+      "long": 4.989064
+    },
+    {
+      "name": "Les îles",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.824012,
+      "long": 4.977402
+    },
+    {
+      "name": "Gare",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.827502,
+      "long": 4.977088
+    },
+    {
+      "name": "Mairie",
+      "ville": "Saint-Maurice de Beynost",
+      "lat": 45.830517,
+      "long": 4.976186
+    },
+    {
+      "name": "Trêve",
+      "ville": "Miribel",
+      "lat": 45.828100,
+      "long": 4.970694
+    },
+    {
+      "name": "Anne Frank",
+      "ville": "Miribel",
+      "lat": 45.827362,
+      "long": 4.966484
+    },
+    {
+      "name": "Henri Deschamps",
+      "ville": "Miribel",
+      "lat": 45.827562,
+      "long": 4.961681
+    },
+    {
+      "name": "Place de la République",
+      "ville": "Miribel",
+      "lat": 45.825866,
+      "long": 4.957789
+    },
+    {
+      "name": "Centre",
+      "ville": "Miribel",
+      "lat": 45.824432,
+      "long": 4.953965
+    },
+    {
+      "name": "Mairie",
+      "ville": "Miribel",
+      "lat": 45.822735,
+      "long": 4.953022
+    },
+    {
+      "name": "Terreaux",
+      "ville": "Miribel",
+      "lat": 45.826585,
+      "long": 4.953106
+    },
+    {
+      "name": "Les Buttières",
+      "ville": "Miribel",
+      "lat": 45.825597,
+      "long": 4.945528
+    },
+    {
+      "name": "Madone",
+      "ville": "Miribel",
+      "lat": 45.828501,
+      "long": 4.949916
+    },
+    {
+      "name": "Mas Rillier",
+      "ville": "Miribel",
+      "lat": 45.829529,
+      "long": 4.945890
+    }]
+}
