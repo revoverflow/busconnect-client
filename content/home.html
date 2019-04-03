@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BusConnect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/home.css" />
+    <script>
+        var socket = io.connect('http://188.166.22.231:80');
+        var arretPos = {
+            lat: 45.740305,
+            long: 4.867690
+        };
+
+        socket.on("verify", function (data) {
+            if (data.success) {
+                console.log("[!] Connexion au serveur rÃ©ussie !");
+                console.log("[ID] " + data.id);
+                socket.emit("set_arret", {
+                    arret: "A-TEST"
+                });
+            }
+        });
+
+        socket.on("location_update", data => {
+            console.log(data);
+
+            var timetogo = new Date().getTime() + ((((distanceInKmBetweenEarthCoordinates(arretPos.lat, arretPos.long, data.lat, data.lng) / 50) * 60) * 60) * 1000);
+
+            document.getElementById("timelabel").innerHTML = "Ligne " + data.ligne;
+            document.getElementById("time").innerText = new Date().getHours() + ":" + ("0" + new Date().getMinutes()).slice(-2);
+            document.getElementById("arrivtime").innerText = new Date(timetogo).getHours() + ":" + ("0" + new Date(timetogo).getMinutes()).slice(-2);
+        });
+
+        var notifstate = false;
+
+        function switchNotif() {
+            notifstate = !notifstate;
+
+            if (notifstate) {
+                $("#map").animate({
+                    height: "66vh"
+                }, 1000);
+            } else {
+                $("#map").animate({
+                    height: "100vh"
+                }, 1000);
+            }
+        }
+
+        function degreesToRadians(degrees) {
+            return degrees * Math.PI / 180;
+        }
+
+        function distanceInKmBetweenEarthCoordinates(lat1, lon1, lat2, lon2) {
+            var earthRadiusKm = 6371;
+
+            var dLat = degreesToRadians(lat2 - lat1);
+            var dLon = degreesToRadians(lon2 - lon1);
+
+            lat1 = degreesToRadians(lat1);
+            lat2 = degreesToRadians(lat2);
+
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return earthRadiusKm * c;
+        }
+
+        setInterval(() => {
+            document.getElementById("time").innerText = new Date().getHours() + ":" + new Date().getMinutes();
+        }, 10);
+    </script>
+</head>
+
+<body>
+    <h1 id="time">20:19</h1>
+    <p id="timelabel"></p>
+    <h1 id="arrivtime"></h1>
+
+</body>
+
+</html>

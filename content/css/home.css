@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700');
+
+* {
+    margin: 0;
+}
+
+body {
+    padding: 5%;
+    background: #2373cf;
+    background-image: url("../img/wp.jpg");
+    background-size: 800px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+#timelabel {
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+#arrivtime {
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+#distance {
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
