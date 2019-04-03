@@ -25,10 +25,12 @@
         });
       
         function presence(ligne_num) {
+            document.getElementById("confbtn").style.background = "#212121";
             document.getElementById("confbtn").disabled = true;
-            document.getElementById("confbtn").innerText = "Votre présence a l'arrêt a été signalée au conducteur !";
+            document.getElementById("confbtn").innerText = "Présence a l'arrêt signalée au conducteur !";
 
             setTimeout(() => {
+                document.getElementById("confbtn").style.background = "#17a536";
                 document.getElementById("confbtn").disabled = false;
                 document.getElementById("confbtn").innerText = "Je souhaite prendre cette ligne";
             }, 5000);
