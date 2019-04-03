@@ -25,6 +25,14 @@
         });
       
         function presence(ligne_num) {
+            document.getElementById("confbtn").disabled = true;
+            document.getElementById("confbtn").innerText = "Votre présence a l'arrêt a été signalée au conducteur !";
+
+            setTimeout(() => {
+                document.getElementById("confbtn").disabled = false;
+                document.getElementById("confbtn").innerText = "Je souhaite prendre cette ligne";
+            }, 5000);
+
             socket.emit("presence", { ligne: ligne_num });
         }
         
@@ -65,7 +73,7 @@
 
     <div class="infos">
         <p class="lignenum" id="ligneid">171</p>
-        <button class="confirm" onclick="presence(current_ligne);">Je souhaite prendre cette ligne</button>
+        <button id="confbtn" class="confirm" onclick="presence(current_ligne);">Je souhaite prendre cette ligne</button>
     </div>
 </body>
 

@@ -71,7 +71,7 @@
         }
 
         setInterval(() => {
-            document.getElementById("time").innerText = new Date().getHours() + ":" + new Date().getMinutes();
+            document.getElementById("time").innerText = new Date().getHours() + ":" + ("0" + new Date().getMinutes()).slice(-2);
         }, 10);
     </script>
 </head>
